@@ -1,0 +1,67 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  width: min(550px, 80vw);
+}
+
+h1,
+thead {
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 3em;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background: whitesmoke;
+}
+
+td {
+  margin: 0;
+  padding: 0.25rem;
+}
+
+td:nth-child(3) {
+  text-align: center;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* 'loader' and 'spin' based on example from w3schools 👇🏽 😳 */
+.loader {
+  animation: spin 2s linear infinite;
+  border: 1rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1rem solid #3498db;
+  height: 7.5rem;
+  margin: 10vmin 0;
+  width: 7.5rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
