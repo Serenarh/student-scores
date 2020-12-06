@@ -42,6 +42,41 @@ td:nth-child(3) {
   text-align: center;
 }
 
+button {
+  background: #a5d6a7;
+  border: whitesmoke;
+
+  /* https://codepen.io/sdthornton/pen/wBZdXq */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+form button {
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover:not(:focus) {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+form {
+  border-top: solid thin gray;
+  margin-bottom: 10vmin;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+label {
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
+}
+
 .is-hidden {
   display: none;
 }
