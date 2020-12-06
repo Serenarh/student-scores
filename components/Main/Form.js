@@ -12,6 +12,7 @@ export default () => `<form>
       min="0"
       max="100"
       placeholder="Test Score"
+      name="score"
       required
     />
   </span>
