@@ -1,9 +1,17 @@
+import db from "./db";
+
 export default {
   async index() {
-    const res = await fetch(
-      "http://my-json-server.typicode.com/manavm1990/test-scores-json/scores"
-    );
+    // https://firebase.google.com/docs/firestore/query-data/get-data
+    const querySnapshot = await db.collection("students").get();
 
-    return res.json();
+    // https://firebase.google.com/docs/reference/js/firebase.firestore.QuerySnapshot?authuser=0#docs
+    return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  },
+
+  // More generically, the PARAMETER might be called 'payload'
+  async create(student) {
+    // https://firebase.google.com/docs/firestore/manage-data/add-data
+    db.collection("students").add(student);
   },
 };
