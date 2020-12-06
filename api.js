@@ -6,6 +6,7 @@ export default {
     const querySnapshot = await db.collection("students").get();
 
     // https://firebase.google.com/docs/reference/js/firebase.firestore.QuerySnapshot?authuser=0#docs
+    // docs property essentially turns query snapshot into an array
     return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
   },
 
